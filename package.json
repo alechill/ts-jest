@@ -92,7 +92,7 @@
     "prettier": "^1.5.3",
     "react": "latest",
     "react-test-renderer": "latest",
-    "rimraf": "latest",
+    "rimraf": "^2.6.2",
     "ts-jest": "latest",
     "tslint": "next",
     "typescript": "^2.4.1"

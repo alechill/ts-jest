@@ -145,9 +145,10 @@ export function getTSConfig(
   // ts-jest will map lines numbers properly if inlineSourceMap and
   // inlineSources are set to true. The sourceMap configuration
   // is used to send the sourcemap back to Jest
-  config.sourceMap = true;
   config.inlineSourceMap = true;
   config.inlineSources = true;
+  // TS does not allow both sourceMap and ininleSourceMap to be specified - so removeoriginal configured sourceMap value
+  delete config.sourceMap;
 
   // the coverage report is broken if `.outDir` is set
   // see https://github.com/kulshekhar/ts-jest/issues/201
